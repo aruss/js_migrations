@@ -41,7 +41,6 @@ const stateAOld = {
 };
 
 test("migrate thing a", () => {
-  console.log(migrate);
   const migrated = migrate(stateAOld, "2", migrationsForA);
 
   console.log(migrated);

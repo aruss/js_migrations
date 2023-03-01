@@ -9,9 +9,9 @@ function migrate(schema, toVersion, migrations) {
   );
   const newSchema = currentMigration[direction](schema);
   return migrate(newSchema, toVersion);
-};
+}
 
-function upOrDown  (fromVersion, toVersion)  {
+function upOrDown(fromVersion, toVersion) {
   const fromNumbers = fromVersion.split(".").map((el) => Number(el));
   const toNumbers = toVersion.split(".").map((el) => Number(el));
   for (let i = 0; i < fromNumbers.length; i++) {
@@ -23,6 +23,6 @@ function upOrDown  (fromVersion, toVersion)  {
     }
   }
   return "same";
-};
+}
 
-module.exports = migrate; 
+module.exports = migrate;
